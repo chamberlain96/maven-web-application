@@ -104,7 +104,6 @@
 	      <name>Travis Technologies Snapshot Nexus Repository </name>
 	      <url>http://52.23.212.41:8081/repository/webapp/</url>
 	    </snapshotRepository>
-	    
 	</distributionManagement>
 	
 	<build>
@@ -120,15 +119,12 @@
 					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
-			
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>3.4.0</version> <!-- Use the latest version -->
-        </plugin>
-    </plugins>
 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.4.0</version> <!-- Use the latest version -->
+			</plugin>
 
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
@@ -153,9 +149,6 @@
 					<wtpContextName>maven-web-application</wtpContextName>
 				</configuration>
 			</plugin>
-			
-</plugins>
+		</plugins>
 	</build>
-	
-	
 </project>
